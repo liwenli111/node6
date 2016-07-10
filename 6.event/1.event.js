@@ -28,14 +28,21 @@ Event.prototype.emit = function (eventName) {
     if(cur){
         cur.forEach(function (item) {
             //item所带表的就是drink,eat
-            item.apply(that,args)
-        })
+            item.apply(that,args);
+        });
     }
 };
 //移出监听
-Event.prototype.removeListener = function () {
-
+Event.prototype.removeListener = function (eventName,callback) {
+    //拿出当前事件名字，对应的事件队列
+    this._events[eventName] = this._events[eventName].filter(function (item) {//item代表每一个事件
+        //将现有要取消绑定的做判断移出掉要删除的
+        return item != callback;
+    });
 };
+Event.prototype.once = function () {
+    //作业  写一个once方法
+}
 var e = new Event();
 function eat (who){
     console.log(1+who);
@@ -43,7 +50,7 @@ function eat (who){
 function drink (who){
     console.log(2+who);
 }
-e.on('饿了',eat);
-e.on('饿了',drink);
-e.removeListener('饿了',drink);
+e.once('饿了',eat);
 e.emit('饿了','我');
+e.emit('饿了','我');
+//绑定后 执行后再删除掉
