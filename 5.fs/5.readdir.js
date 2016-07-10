@@ -13,11 +13,11 @@ curArr.forEach(function (item) {
     if(stat.isDirectory()){
         console.log('./dir/'+item+"是文件夹");
         //删除目录
-        fs.rmdirSync('./dir/'+item)
+        fs.rmdirSync('./dir/'+item);
     }
     if(stat.isFile()){
         console.log('./dir/'+item+"是文件");
         //删除文件
-        fs.unlinkSync('./dir/'+item)
+        fs.unlinkSync('./dir/'+item);
     }
 });
