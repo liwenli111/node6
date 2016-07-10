@@ -28,7 +28,6 @@ console.log(format);
 //后面写上匹配出来的当前的文件的后缀
 //拿去一个文件的名字 在拿去另一个文件的后缀，生成新的文件
 console.log(path.basename('a.js','.js'));
-
 //path.extname
 console.log(path.extname('b.png'));
 console.log(path.basename('a.js','.js')+path.extname('b.png'));
