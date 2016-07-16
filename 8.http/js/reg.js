@@ -32,7 +32,6 @@ function toJson(myform){
     return result;
 }
 btn.addEventListener('click', function () {
-    console.log();
     var xhr = new XMLHttpRequest();
     //post请求 发送给服务器端
     xhr.open('post','/reg',true);
