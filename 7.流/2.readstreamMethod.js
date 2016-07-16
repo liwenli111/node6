@@ -11,7 +11,6 @@ setTimeout(function () {
 rs.on('data', function (data) {
     console.log(data);
 });
-
 //pause() 暂停 resume() 恢复  setEncoding()设置编码
 
 

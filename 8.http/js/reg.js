@@ -27,10 +27,10 @@ btn.addEventListener('click', function () {
         str+='<ul>';
         xhr.response.forEach(function (item) {
             str+='<li>'+item.username+'   '+item.password+'</li>'
-        })
+        });
         str+='</ul>';
         list.innerHTML = str;
-    }
+    };
     xhr.send(serializable(myform)); //send里放字符串
 
 
