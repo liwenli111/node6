@@ -12,7 +12,10 @@ http.createServer(function (request,response) {
     <div></div>\
     </body>\
     </html>';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8bfabeaa26751997a8b34dbbe02908f8abd72df0
     http.get('http://baijia.baidu.com', function (res) {
         //请求服务器，别人返回给我的响应
         var result = '';
@@ -28,15 +31,23 @@ http.createServer(function (request,response) {
             arr.forEach(function (item) {
                 //item当前h3
                 str+='<li>'+item+'</li>'
+<<<<<<< HEAD
             })
+=======
+            });
+>>>>>>> 8bfabeaa26751997a8b34dbbe02908f8abd72df0
             str += '</ul>';
             strLar = strLar.replace('<div></div>',str);
             //要将自己的页面进行写回
             response.end(strLar);
         });
+<<<<<<< HEAD
     })
 
 
 
 
+=======
+    });
+>>>>>>> 8bfabeaa26751997a8b34dbbe02908f8abd72df0
 }).listen(8080);
